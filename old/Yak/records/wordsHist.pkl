@@ -1,0 +1,44 @@
+(dp0
+S'Entrega el resultado por el chat'
+p1
+I1
+sVsolo 3?
+p2
+I1
+sVgracias
+p3
+I1
+sVYak?
+p4
+I1
+sS'Yak'
+p5
+I8
+sVno se q hacer ahora XD
+p6
+I1
+sVcrea una consola
+p7
+I2
+sVffff
+p8
+I1
+sVq practico XD
+p9
+I1
+sVhola
+p10
+I3
+sVtrabajamos?
+p11
+I1
+sVcreo que estas contando mal XD
+p12
+I1
+sVtenemos que programar el sistema master-slave
+p13
+I1
+sVHola
+p14
+I1
+s.

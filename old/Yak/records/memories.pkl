@@ -1,0 +1,32 @@
+(dp0
+S'He guardado este conocimiento en ./records/memories.pkl'
+p1
+I11
+sS'open_chat'
+p2
+I1
+sS'Me llamo Yak'
+p3
+I24
+sS'He detectado ordenes pendientes en ./master_in'
+p4
+I25
+sS'test'
+p5
+I6
+sS'Esta pantalla es de SOLO LECTURA para ti'
+p6
+I15
+sS'Esta pantalla es de SOLO LECTURA'
+p7
+I1
+sS'En esta pantalla se imprimen mis memorias'
+p8
+I17
+sS'Para agregar ordenes usa el MasterTerminal'
+p9
+I12
+sS'hola'
+p10
+I4
+s.

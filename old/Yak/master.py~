@@ -1,0 +1,23 @@
+import pickle
+
+def MasterTerminal():
+	print('MasterTerminal')
+	order={'id':00000,'msg':'OrderDEMO','triggers':		['demo','test'],'status':'ToDo'}
+input('hola')
+new_order={'name':order_name}
+with open('./master_in/'+order_name, 'w') as f: 
+	pickle.dump(new_order, f)
+
+
+if __name__ == "__main__":
+	if len(argv)==2:
+		if argv[1]=='-x'
+			MasterTerminal()
+
+
+
+
+
+
+
+
