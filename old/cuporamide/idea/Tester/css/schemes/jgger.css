@@ -1,0 +1,174 @@
+a {
+  color: #420943;
+}
+a:hover {
+  color: #350736;
+}
+.highlight {
+  background: #420943;
+}
+.dropcap-color:first-letter {
+  background: #420943;
+}
+.btn-primary {
+  background: #420943;
+}
+.btn-primary:hover {
+  background: #350736;
+}
+.btn-white {
+  color: #420943;
+}
+.list-icon-color li:before {
+  color: #420943;
+}
+footer.main {
+  border-top: 3px solid #3b083c;
+}
+.nav-pills > li.active > a {
+  background: #420943;
+}
+.nav-pills > li.active > a:hover {
+  background: #420943;
+}
+.box-icon {
+  background: #420943;
+  color: #fff;
+}
+.box-icon:hover {
+  background: #350736;
+  color: #fff;
+}
+.pagination ul li.active a {
+  background: #420943;
+  border-color: #420943;
+}
+.nav-pills.nav-stacked.nav-arrow > li.active a:after {
+  background: #420943;
+}
+.tabbable >.nav li.active a {
+  background: #420943;
+}
+.accordion-toggle.active {
+  background: #420943;
+}
+.coupon-category-icon {
+  background: #420943;
+}
+.coupon-thumb .coupon-title {
+  color: #420943;
+}
+.coupon-thumb .coupon-new-price {
+  background: #420943;
+}
+.coupon-search-results .coupon-price {
+  background: #420943;
+}
+.nav-tabs.nav-stacked.nav-coupon-category > li > a:hover [class^="icon-"] {
+  background: #420943;
+}
+.nav-tabs.nav-stacked.nav-coupon-category >.active > a {
+  background: #420943;
+  border-bottom: 1px solid #420943 !important;
+  border-top: 1px solid #420943 !important;
+}
+.nav-tabs.nav-stacked.nav-coupon-category >.active > a [class^="icon-"] {
+  background: #410942;
+  border-right: 1px solid #3b083c;
+}
+.nav-tabs.nav-stacked.nav-coupon-category >.active > a:hover {
+  background: #420943;
+}
+.nav-tabs.nav-stacked.nav-coupon-category >.active > a:before {
+  background: #420943;
+}
+.nav-tabs.nav-stacked.nav-coupon-category.nav-coupon-category-right >.active > a [class^="icon-"] {
+  border-left: 1px solid #3b083c;
+}
+.search-area {
+  background: #420943;
+}
+.search-area label [class^="icon-"] {
+  background: #350736;
+}
+.countdown.countdown-inline > div:first-child span.count {
+  color: #420943;
+}
+.countdown.countdown-inline > div:first-child span.title {
+  color: #420943;
+}
+.slider-wrapper .nivo-directionNav a:before {
+  background-color: #420943;
+}
+.slider-wrapper .nivo-controlNav a.active:before {
+  background: #420943;
+}
+.carousel .carousel-control {
+  background: #420943;
+}
+.flexnav li.active > a {
+  background: #420943;
+  border-color: #420943 !important;
+}
+.flexnav li.active > a:hover {
+  background: #420943;
+}
+.flexnav-menu-button {
+  background: #420943;
+}
+.touch-button {
+  background: #420943;
+}
+.touch-button.active {
+  background: #380839;
+}
+.mfp-dialog .dialog-icon {
+  background: #420943;
+}
+.wilto-controls .next,
+.wilto-controls .prev {
+  background: #420943;
+}
+.testimonial-color .testimonial-inner {
+  border: 1px solid #420943;
+  background: #420943;
+}
+.testimonial-color .testimonial-inner:after {
+  border-color: #420943 transparent transparent transparent;
+}
+.testimonial-color .testimonial-inner:before {
+  border-color: #420943 transparent transparent transparent;
+}
+.hover-img {
+  background: #070107;
+}
+.hover-img >.hover-title {
+  background: #3b083c;
+}
+.hover-img .hover-inner {
+  background: #3b083c;
+}
+.hover-img .hover-icon:before {
+  background: #420943;
+}
+.mejs-controls .mejs-time-rail .mejs-time-loaded {
+  background: #420943;
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: #680e69;
+}
