@@ -1,0 +1,91 @@
+SIR={
+	'inputs':{
+		'status':'INIT',	
+		'probabilities':{
+			'alpha':0,
+			'beta':0,
+			'eta':0},
+		'rates':{
+			'lambda':0,
+			'delta':0,
+			'xi':0},
+	},
+	'graph':{
+		'status':'INIT',
+		'size':0,
+		'name':'None',
+		'savefile':'',		
+		
+		'degree':{
+			'k_mean':0,
+			'Teo':{
+				'degree_dist':{
+					'k':[],
+					'value':[],
+					},
+				'uncorr_func':{
+					'k':[],
+					'value':[],
+					}
+			},
+			'BF':{
+				'degree_dist':{
+					'k':[],
+					'value':[],
+					},
+				'uncorr_func':{
+					'k':[],
+					'value':[],
+					}
+			},
+			'Exp':{
+				'degree_dist':{
+					'k':[],
+					'value':[],
+					},
+				'corr_func':{
+					'k':[],
+					'x':[],
+					'value':[],
+					},
+				'uncorr_func':{
+					'k':[],
+					'value':[],
+					}
+			},
+		},
+	},
+	'results':{
+		't_t':[],
+		'i_t':[],
+		's_t':[],
+		'r_t':[]},
+
+}
+
+SIR_demo={
+	'probabilities':{
+		'alpha':0,
+		'beta':0,
+		'eta':0},
+	'rates':{
+		'lambda':0,
+		'delta':0,
+		'xi':0},
+	'graph':{
+		'k_mean':0,
+		'degree_dist':{
+			'index':[],
+			'value':[],
+			},
+	},
+	'results':{
+		't_t':[],
+		'i_t':[],
+		's_t':[],
+		'r_t':[]},
+
+}
+
+
+
