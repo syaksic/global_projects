@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.19)  31 JAN 2015 14:11
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.19)  3 MAR 2015 18:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -869,11 +869,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 Package epstopdf Info: Source file: <./temp/exp/results/Image01.eps>
-(epstopdf)                    date: 2015-01-31 14:11:43
-(epstopdf)                    size: 44435 bytes
+(epstopdf)                    date: 2015-03-03 18:01:11
+(epstopdf)                    size: 49532 bytes
 (epstopdf)             Output file: <./temp/exp/results/Image01-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2015-01-31 02:09:54
+(epstopdf)                    date: 2015-01-31 14:11:55
 (epstopdf)                    size: 27641 bytes
 (epstopdf)             Command: <repstopdf --outfile=./temp/exp/results/Image01
 -eps-converted-to.pdf ./temp/exp/results/Image01.eps>
@@ -883,8 +883,8 @@ runsystem(repstopdf --outfile=./temp/exp/results/Image01-eps-converted-to.pdf .
 
 Package epstopdf Info: Result file: <./temp/exp/results/Image01-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2015-01-31 14:11:55
-(epstopdf)                    size: 27641 bytes.
+(epstopdf)                    date: 2015-03-03 18:01:16
+(epstopdf)                    size: 32519 bytes.
 
 <./temp/exp/results/Image01-eps-converted-to.pdf, id=112, 578.16pt x 433.62pt>
 File: ./temp/exp/results/Image01-eps-converted-to.pdf Graphic file (type pdf)
@@ -901,11 +901,11 @@ Overfull \vbox (28.45546pt too high) detected at line 52
 
  <./temp/exp/results/Image01-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./temp/exp/results/Image02.eps>
-(epstopdf)                    date: 2015-01-31 14:11:43
-(epstopdf)                    size: 52897 bytes
+(epstopdf)                    date: 2015-03-03 18:01:12
+(epstopdf)                    size: 66444 bytes
 (epstopdf)             Output file: <./temp/exp/results/Image02-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2015-01-31 02:09:55
+(epstopdf)                    date: 2015-01-31 14:11:55
 (epstopdf)                    size: 27561 bytes
 (epstopdf)             Command: <repstopdf --outfile=./temp/exp/results/Image02
 -eps-converted-to.pdf ./temp/exp/results/Image02.eps>
@@ -915,10 +915,10 @@ runsystem(repstopdf --outfile=./temp/exp/results/Image02-eps-converted-to.pdf .
 
 Package epstopdf Info: Result file: <./temp/exp/results/Image02-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2015-01-31 14:11:55
-(epstopdf)                    size: 27561 bytes.
+(epstopdf)                    date: 2015-03-03 18:01:17
+(epstopdf)                    size: 33295 bytes.
 
-<./temp/exp/results/Image02-eps-converted-to.pdf, id=192, 578.16pt x 433.62pt>
+<./temp/exp/results/Image02-eps-converted-to.pdf, id=199, 578.16pt x 433.62pt>
 File: ./temp/exp/results/Image02-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./temp/exp/results/Image02-eps-converted-to.pdf>
@@ -939,11 +939,11 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 99.
 
 Package epstopdf Info: Source file: <./temp/exp/results/Image03.eps>
-(epstopdf)                    date: 2015-01-31 14:11:44
-(epstopdf)                    size: 178473 bytes
+(epstopdf)                    date: 2015-03-03 18:01:13
+(epstopdf)                    size: 187626 bytes
 (epstopdf)             Output file: <./temp/exp/results/Image03-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2015-01-31 02:09:55
+(epstopdf)                    date: 2015-01-31 14:11:56
 (epstopdf)                    size: 151582 bytes
 (epstopdf)             Command: <repstopdf --outfile=./temp/exp/results/Image03
 -eps-converted-to.pdf ./temp/exp/results/Image03.eps>
@@ -953,10 +953,10 @@ runsystem(repstopdf --outfile=./temp/exp/results/Image03-eps-converted-to.pdf .
 
 Package epstopdf Info: Result file: <./temp/exp/results/Image03-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2015-01-31 14:11:56
-(epstopdf)                    size: 151582 bytes.
+(epstopdf)                    date: 2015-03-03 18:01:18
+(epstopdf)                    size: 152428 bytes.
 
-<./temp/exp/results/Image03-eps-converted-to.pdf, id=304, 578.16pt x 433.62pt>
+<./temp/exp/results/Image03-eps-converted-to.pdf, id=319, 578.16pt x 433.62pt>
 File: ./temp/exp/results/Image03-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./temp/exp/results/Image03-eps-converted-to.pdf>
@@ -996,7 +996,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 113.
  ) 
 Here is how much of TeX's memory you used:
  16820 strings out of 493304
- 313428 string characters out of 6139871
+ 313424 string characters out of 6139871
  391248 words of memory out of 5000000
  19855 multiletter control sequences out of 15000+600000
  13044 words of font info for 51 fonts, out of 8000000 for 9000
@@ -1013,9 +1013,9 @@ blic/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy6.pfb>
-Output written on ./temp/exp/results//logger.pdf (6 pages, 303435 bytes).
+Output written on ./temp/exp/results//logger.pdf (6 pages, 314538 bytes).
 PDF statistics:
- 463 PDF objects out of 1000 (max. 8388607)
+ 479 PDF objects out of 1000 (max. 8388607)
  270 compressed objects within 3 object streams
  20 named destinations out of 1000 (max. 500000)
  128 words of extra memory for PDF output out of 10000 (max. 10000000)

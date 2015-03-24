@@ -199,7 +199,7 @@ Theoretical $P(k|x)$ using the parameters of blue curve $P(k)$ and $P(k|x=\langl
 	logger.generate(out_path+'logger.tex')
 	logger.compile(out_path+'logger.tex',out_path)
 
-#Degree_Inform_generator('./temp/exp/','test00000.bkp','./temp/exp/results/')
+Degree_Inform_generator('./temp/exp/','test00000.bkp','./temp/exp/results/')
 
 
 
