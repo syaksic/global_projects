@@ -1,0 +1,42 @@
+\subsection{Problem Identification}
+
+The way information spreads among people has changed substantially in recent years: from mouth to mouth, by mail, by telephone, short messages (SMS), e-mail,
+blogs, microblogs, and nowadays by social networks. 
+The spread process of specific information, over a social network site, may be considered as a stochastic rumor-spreading process over a complex social network graph. 
+A recent example is the memes spread studied in \cite{weng2013virality}, concluding that, ``the future popularity of a meme can be predicted by quantifying its early spreading pattern in terms of community concentration".
+
+The behaviour of stochastic rumors are commonly modelled using the SIR model \cite{nekovee2007theory}. However, the traditional SIR model ignores the fact that a rumor can be restarted by retired users using a remembering mechanism (documentation, memory as examples).
+
+In this work we propose a refined SIR model with the aggregation of a resilience probability, the probability of a retired user to keep rejecting some information after contacts with spreaders and a spontaneously remembering rate at which retired users remember a forgotten rumor. 
+Also the transitions between states are only triggered by contact of any user with a spreader. This observation implies that stifling transitions (spreader learn that the rumor lost its 'news value') occurs only when spreaders get contacted by other spreader and the contacted individual cease propagating the rumor.
+
+\subsection{Glossary}
+
+\begin{itemize}
+	\item$\lambda[\frac{1}{s}]$: Contact rate between users. 1 contact per second 
+	\item$\delta[\frac{1}{3600s}]$: Average users forgetting rate. 1 forget per hour 
+	\item$\xi[\frac{1}{24\cdot3600s}]$: Average users remember rate. 1 remember per day.
+\end{itemize}
+\begin{itemize}
+	\item$\alpha$: Stifling probability.  
+	\item$\beta$: Rejecting probability.
+	\item$\eta$: Resilience probability.
+\end{itemize}
+
+\subsection{State of the Art}
+
+In 1927, W. O. Kermack and A. G. McKendrick created the epidemic SIR model in which they considered a fixed population with only three compartments: susceptible, $S(t)$; infected, $I(t)$; and removed, $R(t)$. Assuming that rumors are similar in behaviour to a disease contagion process, in \cite{daley1965stochastic,daley1964epidemics} Daley and Kendall present the DK model for rumor contagion, based on the SIR model. In this rumor SIR model, users are part of a fixed population and the compartments are: S(spreader of the rumor), I(ignorant about the rumor), and R (retired/rejected individuals who know the rumor but don't spread it).\\
+
+Many modifications to the rumor SIR model have been proposed. 
+A first representation of rumor spreading in complex social networks was presented by Nekovee et al. in \cite{moreno2004dynamics,nekovee2007theory}. In this model the rumour spreads by contact of the spreaders with others in the network. 
+Their results show that scale-free social networks are prone to the spreading of rumours, just as they are to the spreading of infections. Zhao et al. present some modifications to include a forgetting mechanism \cite{zhao2011rumor} and a refusing rate \cite{zhao2013sir}.
+Their results, through numerical simulation, show that parameters like forgetting rate and probability of spreaders changing into retired may weaken the influence of rumor. 
+Another variation includes a hibernation compartment \cite{zhao2012sihr} and a remembering rate \cite{zhao2013rumor}. 
+Here, spreaders forget the rumor and became hibernators, where hibernators spontaneously remember the rumor and became spreaders. 
+Hibernators get contacted by spreader and remember the rumor with some probability and become spreaders. 
+The last added factors have no effect on the final size of a rumor, but they have effect on the process of rumor spreading.\\
+In \cite{isham2010stochastic}, the authors used embedded Markov chain techniques to derive a set of equations for the final size of the epidemic/rumour on a homogeneous network that can be solved numerically. These results contrasted with Monte-Carlo simulations show that the approximated stochastic model reproduces the simulation results with great accuracy.\\
+During the year 2014 some new variants of the SIR model were published. 
+In \cite{wang2014siraru}, the authors proposed the SIRaRu model with two retired compartments, one for users who accept the rumor but do not spread it and the second for users who do not accept the rumor. 
+In \cite{afassinou2014analysis}, the authors presented the SEIR model where users may be Educated ignorants (low chance to accept any untrue information) or Uneducated ignorants (high chance to accept any untrue information). 
+In both variants the rumor final size decreases in comparison with the original SIR model.

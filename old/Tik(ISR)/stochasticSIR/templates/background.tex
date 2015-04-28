@@ -1,0 +1,147 @@
+\newpage
+
+\section{Background}
+%
+%fill in
+%
+
+\subsection{Social network graph}
+
+In \cite{ellison2007social} authors define social network sites (SNs) \cite{ellison2007social} as web-based services that allow individuals to (1) construct a public or semi-public profile, (2) articulate a list of other users with whom they share information, and (3) view their list of connections and those made by others within the system. The Social Network Analisys can be described as the ``study of human relationships by means of graph theory" where SNs have become an important tool \cite{tsvetovat2011social}.
+
+Under these characteristics an SNs may be seen as a network graph \cite{vlachos2005ngce} or a complex network graph \cite{barrat2008dynamical} where individuals are considered as vertices and connections between vertices are represented by edges. A graph $G(V,E)$ is made up of $V$ vertices and $E$ lines called edges that connect them. A graph may be undirected, meaning that there is no distinction between the two vertices associated with each edge, or its edges may be directed from one vertex to another.
+
+Most networks exhibit the presence of non trivial correlations in their connectivity pattern \cite{serrano2007correlations}. The two more basics ways for measuring the connectivity patterns are the degree distribution and the degree-degree correlation function. The degree of a vertex is the number of connections from that vertex to others. The degree distribution $P(k)$ is defined by the fraction of vertices in the network with degree $k$. Thus if there are a total of $V$ vertices and $V_k$ vertices with degree $k$, we have $P(k)=V_k/V$. The degree-degree correlation function $P(k|x)$ is the conditional probability that a vertex of degree $x$ is connected to a vertex with degree $k$.
+``http://dl.acm.org/citation.cfm?id=1452527"
+
+Authors usually study rumor models asuming a homogeneous network \cite{zhao2011rumor,zhao2013sir,zhao2012sihr} (every node has k neighbours) and a more realistic case asuming a scale-free network \cite{moreno2004dynamics,nekovee2007theory,zhao2013rumor,isham2010stochastic, pastor2001epidemic} (the probability of randomly choosing a node with ``k" neighbours follow a power-law distribution)
+
+\subsubsection{Homogeneous networks}
+
+In order to understand some basic features of our rumour model we will study the case of non-directional homogeneous networks, in which degree fluctuations are very small and there are no degree correlations. Homogeneous graphs were for many years the epidemiologists preferred choice for describing the spread of infectious diseases. A homogeneous graph with $V$ vertices will always have an average degre $\langle k\rangle=\frac{E}{V}$. As all vertices have the same degree, here
+
+\[ P(k) = \left\{ 
+  \begin{array}{l l}
+    1 & \quad \text{if $k=\langle k\rangle$}\\
+    0 & \quad \text{otherwise}
+  \end{array} \right.\]
+
+and 
+
+\[ P(k'|k) = \left\{ 
+  \begin{array}{l l}
+    1 & \quad \text{if $k=k'=\langle k\rangle$}\\
+    0 & \quad \text{otherwise}
+  \end{array} \right.\]
+
+
+\subsection{SIR Mean-Field rate equations}
+\label{sec:mean-field}
+
+In \cite{moreno2004dynamics} authors defined a stochastic numerical approach (SNA) based on the mean-field rate equations that describe the dynamics between states in the stochastic SIR rumor model. For the refined SIR model let
+
+\begin{equation}
+\label{eq:theta_I}
+\theta(k,t)\approx\sum{P(k|j)S(k,t)/V_{k}}
+\end{equation}
+
+be the probability at time $t$ of being connected with one spreader given that we select a vertex with degree $j$. In this expression, $P(k|j)$ is the conditional probability that an edge emanating from an ignorant vertex with degree $j$ points to a vertex with degree $k$; $S(k,t)$ is the number of spreader with degree $k$ at time $t$, and $V_{k}=S(k,t)+I(k,t)+R(k,t)$ is the total number of vertices with degree $k$. Observation: The approximation in equation \ref{eq:theta_I} is obtained by ignoring dynamic correlations between the states of neighbouring nodes. This approximation may imply some errors in the final results of small graphs ($N<10000$).
+
+Let $P^g_{I}=(1-\lambda\Delta t)^g$ be the probability that an ignorant vertex stays in ignorant state during time interval $[t,t+\Delta t]$ after being contacted by $g$ spreader vertices. Then the average staying probability over all possible values of $g$ for vertices with degree $k$ is:
+
+\begin{equation}
+\label{eq:PII}
+\overline{P_{I}}(k,t)=\sum_{g=0}^k(1-\lambda\Delta t)^g\binom{k}{g}\theta(k,t)^g(1-\theta(k,t))^{k-g}
+\end{equation}
+
+where $\lambda$ is the contact rate between users. Using the binomial theorem, this becomes
+
+\begin{equation}
+\overline{P_{I}}(k,t)=[1-\lambda\Delta t\theta(k,t)]^k\\
+\end{equation}.
+
+For spreader users, authors commonly consider a stifling rate at which spreaders become retired after contacting another spreader or a retired user. Here $\lambda\alpha$ is the stifling rate and $\alpha$ is the stifling probability. Hence stifling rate only depends from spreader population and not from retired population.
+\\
+Now the probability of staying in spreader state is $P^g_{S}=(1-\lambda\alpha\Delta t)^g(1-\delta\Delta t)$. In a similar fashion we obtain $\overline{P_{S}}(k,t)$, the average staying probability for spreaders, as
+
+\begin{equation}
+\label{eq:PS}
+\overline{P_{S}}(k,t)=[1-\lambda\alpha\Delta t \theta(k,t)]^k(1-\delta\Delta t)
+\end{equation}
+
+and in a similar way the probability of staying in retired state is:
+
+\begin{equation}
+\label{eq:PR}
+\overline{P_{R}}(k,t)=[1-\lambda\overline{\eta}\Delta t \theta(k,t)]^k(1-\xi\Delta t)
+\end{equation}
+
+here $\lambda\overline{\eta}$ is the persuading rate and $\eta=1-\overline{\eta}$ is the resilience probability.
+
+Denote with $I(k,t)$, $S(k,t)$, $R(k,t)$ the expected values of the populations of vertices with degree $k$ which at time $t$ are in the ignorant, spreader or retired state, respectively. The event that an ignorant makes a transition to another state in time interval [$t,t+\Delta t$] is a Bernoulli random variable with probability ($1-\overline{P_{I}}(k,t)$) of success. As a sum of i.i.d random Bernoulli variables, the total number of successful transitions in this time interval has a binomial distribution, with an expected value $I(k,t)[1-\overline{P_{I}}(k,t)]$. Hence, the rate of change in the expected value of the population of ignorant nodes with $k$ neighbours is given by
+
+\begin{equation}
+\label{eq:ign_trans1}
+I(k,t+\Delta t)=I(k,t)-I(k,t)(1-\overline{P_{I}}(k,t))
+\end{equation}
+
+As ignorants become spreaders with probability $\overline{\beta}(1-\overline{P_{I}}(k,t))$ and retired with probability $\beta(1-\overline{P_{I}}(k,t))$, being $\beta=1-\overline{\beta}$ the rejecting probability. The rate of change in the expected value of the population of spreaders and retired nodes with $k$ neighbours are given by
+
+\begin{equation}
+S(k,t+\Delta t)=\overline{\beta}I(k,t)(1-\overline{P_{I}}(k,t))+S(k,t)-S(k,t)(1-\overline{P_{S}}(k,t))+R(k,t)(1-\overline{P_{R}}(k,t))
+\end{equation}
+
+and 
+
+\begin{equation}
+R(k,t+\Delta t)=V_k-I(k,t+\Delta t)-S(k,t+\Delta t),
+\end{equation}
+
+respectively. 
+
+Subtracting $I(k,t)$ at both sides of equation \ref{eq:ign_trans1} and dividing by $\Delta t$, we obtain
+
+$$
+\begin{aligned}
+\frac{I(k,t+\Delta t)-I(k,t)}{\Delta t}&=\frac{-I(k,t)}{\Delta t}(1-\overline{P_{I}}(k,t))\\
+&=\frac{-I(k,t)}{\Delta t}(1-[1-\lambda\Delta t\theta(k,t)]^k)
+\end{aligned}
+$$
+
+using Appendix \ref{appendix1}
+
+$$
+\begin{aligned}
+\frac{I(k,t+\Delta t)-I(k,t)}{\Delta t}=-I(k,t)\Bigg[\frac{1}{\Delta t}-\Bigg(\frac{1}{\Delta t}-\sum_{i=0}^{k-1}(1-\lambda\theta(k,t)\Delta t)^i\Bigg)\Bigg]
+\end{aligned}
+$$
+
+As $\Delta t$ tends to $0$ we have:
+
+$$
+\begin{aligned}
+\frac{\partial I(k,t)}{\partial t}&=-I(k,t)\Bigg[\frac{1}{\Delta t}-\Bigg(\frac{1}{\Delta t}-\sum_{i=0}^{k-1}\lambda\theta(k,t)(1-\lambda\theta(k,t)\cdot0)^i\Bigg)\Bigg]\\
+&=-I(k,t)\sum_{i=0}^{k-1}\lambda\theta(k,t)\\
+\end{aligned}
+$$
+
+\begin{equation}
+\label{eq:ign_trans_diff}
+\frac{\partial I(k,t)}{\partial t}=-I(k,t)k\lambda\theta(k,t)
+\end{equation}
+
+Proceding similarly, we also obtain
+
+\begin{equation}
+\label{eq:spr_trans_diff}
+\frac{\partial S(k,t)}{\partial t}=\overline{\beta}I(k,t)k\lambda\theta(k,t)
+-S(k,t)(k\lambda\alpha\theta(k,t)+\delta)\\
++R(k,t)(k\lambda\overline{\eta}\theta(k,t)+\xi)\\
+\end{equation}
+
+\begin{equation}
+\label{eq:ret_trans_diff}
+\frac{\partial R(k,t)}{\partial t}=\beta I(k,t)k\lambda\theta(k,t)
+-R(k,t)(k\lambda\overline{\eta}\theta(k,t)+\xi)\\
++S(k,t)(k\lambda\alpha\theta(k,t)+\delta)\\
+\end{equation}

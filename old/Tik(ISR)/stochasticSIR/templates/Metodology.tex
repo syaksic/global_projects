@@ -1,0 +1,107 @@
+\section{Metodology}
+
+\subsection{Monte Carlo Simulation}
+
+In this context, Monte Carlo simulation is a method for exploring the sensitivity of a complex system by varying parameters within statistical constraints. These systems can include financial, physical, and mathematical models that are simulated in a loop, with statistical uncertainty added between simulations. The results from the simulations are analysed to determine the characteristics of the system. As other authors, we will use Monte Carlo simulation to contrast the results obtained by the stochastic numerical approach. For the original SIR model, the parameters that may be varied are the contact rate $\lambda$ and the stifling rate $\alpha$. In our refined model the set of parameters that may be varied are presented in table \ref{tbl:SIR_variables}. The simulation will be executed several times over different network graphs and selecting different initial spreader users. 
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{ l | c }
+  Rates & Probabilities \\
+  \hline      
+  $\lambda$: contact rate & $\beta$: refusing probability\\
+  $\delta$: forgetting rate & $\alpha$: stifling probability\\
+  $\xi$: remembering rate & $\eta$: resilience probability\\
+  \hline  
+\end{tabular}
+\end{center}
+\caption{SIR variables}
+\label{tbl:SIR_variables}
+\end{table}
+
+
+\subsection{Stochastic Numerical Approach (SNA)}
+\label{sec:actual_work}
+
+For the SNA we need to identify the transition weights between states from the mean-field rate equations that describe the transitions between states.
+
+\subsubsection{Transition weights between states for refined SIR model}
+
+In the refined SIR model there are four transitions: from Ignorant state to Spreader state ($W_{IS}$); from Ignorant state to Retired state ($W_{IR}$); from Spreader state to Retired state ($W_{SR}$); and from Retired state to Spreader state ($W_{RS}$).\\
+In this work we will focus on Homogeneous Networks, hence
+
+\begin{equation}
+\label{eq:refWisHomo}
+W_{IS}(t)=\overline{\beta}V\lambda\langle k\rangle\frac{I(t)}{V}\frac{S(t)}{V}     \\
+\end{equation}
+
+\begin{equation}
+\label{eq:refWirHomo}
+W_{IR}(t)=\beta V\lambda\langle k\rangle\frac{I(t)}{V}\frac{S(t)}{V} \\
+\end{equation}
+
+\begin{equation}
+\label{eq:refWsrHomo}
+W_{SR}(t)=V\lambda\alpha\langle k\rangle\frac{S(t)}{V}\frac{S(t)}{V}+S(t)\delta\\
+\end{equation}
+
+\begin{equation}
+\label{eq:refWrsHomo}
+W_{RS}(t)=V\lambda\overline{\eta}\langle k\rangle\frac{R(t)}{V}\frac{S(t)}{V}+R(t)\xi\\
+\end{equation}
+
+Now the mean time interval $\tau$ for one transition to occur is determined as the inverse of the sum of all the transition probabilities:
+
+\begin{equation}
+\label{eq:tau}
+\tau=\frac{1}{{W_{IS}(t)+W_{IR}(t)+W_{SR}(t)+W_{RS}(t)}}\\
+\end{equation}
+
+\subsection{Runge Kutta Method}
+\label{sec:actual_work}
+
+From wikipedia:
+In numerical analysis, the Runge-Kutta methods are an important family of implicit and explicit iterative methods, which are used in temporal discretization for the approximation of solutions of ordinary differential equations. These techniques were developed around 1900 by the German mathematicians C. Runge and M. W. Kutta.
+
+\subsection{Analytical Approximation}
+\label{sec:actual_work}
+
+After several executions using the recently introduced methods, we observed that if $\xi>0$ or $\eta<1$, $I(t)\approx 0$ and $R(t)\approx V-S(t)$ for time $t=t*$ sufficiently big enough. Let $\dot{s(t)}=\frac{\partial s(t)}{\partial t}$, with $s(t)=\frac{S(t)}{V}$, then the variation of the spreaders proportion may be written as follow
+
+\begin{equation}
+\label{eq:an01}
+\dot{s(t)}=\lambda\overline{\eta}\langle k\rangle (1-s(t))-\xi (1-s(t))-\lambda\alpha\langle k\rangle s(t)^2-\delta s(t)
+\end{equation}
+
+Let $\Lambda=\lambda(\overline{\eta}+\alpha)$ be the exchange rate between retired and spreader users. And using an auxiliary variable $\omega=\lambda\overline{\eta}-\delta$, equation \ref{eq:an01} may be written as the following Ricattis equation.
+
+\begin{equation}
+\label{eq:an02}
+\dot{s(t)}=-\Lambda s(t)^2 +(\omega-\xi)s(t) +\xi
+\end{equation}
+
+For $\dot{s(t)}=0$,
+
+\begin{equation}
+\label{eq:an03}
+s_1(t)=\frac{(\omega-\xi)\pm\sqrt{(\omega-\xi)^2+4\Lambda\xi}}{2\Lambda}
+\end{equation}
+
+using $z=\frac{1}{s(t)-s_1(t)}$, $\frac{\partial z}{\partial t}=-[(\omega-\xi)+2s_1(t)(-\Lambda]z+\Lambda$ and $\Omega^2=(\omega-\xi)^2+4\Lambda\xi$
+
+Now $\frac{\partial z}{\partial t}=-[-\Omega]z+\Lambda=\Omega z+\Lambda$ and 
+
+\begin{equation}
+\label{eq:an04}
+z(t)=C\cdot e^{\Omega t}+\Lambda
+\end{equation}
+
+and
+
+\begin{equation}
+\label{eq:an04}
+s(t)=s_1(t)+\frac{1}{C\cdot e^{\Omega t}+\Lambda}
+\end{equation}
+
+Being $C$ a constant that depends on the initial conditions.
+
