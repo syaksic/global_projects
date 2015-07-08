@@ -11,12 +11,12 @@ I0
 S'job'
 p6
 (lp7
-S'start("Sergio-Yak")'
+S'initTurn("Sergio-Yak")'
 p8
 asS'order'
 p9
 (lp10
-S'Set User-Bot'
+S'init'
 p11
 aS'Sergio-Yak'
 p12
